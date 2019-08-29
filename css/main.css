@@ -1,0 +1,13 @@
+.custom-font {
+  font-family: 'aboriginalSerif';
+  font-weight: normal;
+}
+
+.game-option {
+	font-size: 200%;
+}
+
+.fit-image {
+	max-width: 100%; /* keeps images from being stretched */
+  max-height: 170px;
+}

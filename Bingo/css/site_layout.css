@@ -1,0 +1,132 @@
+#column-title {
+    font-family: 'aboriginalSerif';
+    font-weight: normal;
+    font-size: 200%; /* 200% works for showing one character */
+    padding-top: 3%;
+}
+
+.fit-image {
+	max-width: 100%; /* keeps images from being stretched */
+  max-height: 170px;
+}
+
+.hide-element {
+  /*visibility: hidden;*/
+  display: none;
+}
+
+@media only screen and (max-height: 500px) {
+  .fit-image { /* makes this take precedent bc more specific */
+    max-height: 150px;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .fit-image { /* makes this take precedent bc more specific */
+    max-height: 200px;
+  }
+}
+
+@media only screen and (max-height: 730px) {
+  .fit-image { /* makes this take precedent bc more specific */
+    max-height: 220px;
+  }
+}
+
+@media only screen and (max-height: 850px) {
+  .fit-image { /* makes this take precedent bc more specific */
+    max-height: 225px;
+  }
+}
+
+@media only screen and (max-height: 870px) {
+  .fit-image { /* makes this take precedent bc more specific */
+    max-height: 230px;
+  }
+}
+
+@media only screen and (min-height: 900px) {
+  img.fit-image { /* makes this take precedent bc more specific */
+    max-height: 270px;
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  img.fit-image { /* makes this take precedent bc more specific */
+    max-height: 300px;
+  }
+}
+
+.header-row {
+  padding-left: 1%;
+}
+
+.bottom-margin-for-text {
+  margin-bottom: 35%;
+  /* min-hieght: 150px*/ /* ?? this could change with size again??*/
+}
+
+/* Styles for syllable text */
+.syllable-label {
+/*    position: absolute; */
+    color: black;
+}
+
+.syllable-label-heading {
+    font-size: 400%;
+    font-family: 'aboriginalSerif';
+    font-style: normal;
+}
+
+/* Styles for word text */
+.text-label { /* attached to div surrounding text */
+/*    position: absolute; */
+    color: black;
+    top:20%; /* still need to position over the image */
+}
+
+.text-label-heading {
+    font-size: 225%;
+    font-family: 'aboriginalSerif';
+    font-style: normal;
+    justify-content: center;
+}
+
+.custom-font {
+  font-family: 'aboriginalSerif';
+  font-weight: normal;
+}
+
+.blank-button {
+  background-color: transparent;
+  border: none;
+}
+
+.button {
+  background-color: #f2f0eb; /* Gray */
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+}
+
+button[disabled=disabled], button:disabled {
+    color: #d9d8d3;
+}
+
+.top-padding {
+	margin-top: 5%;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.roundButton {
+  padding: 10%;
+}
+
+#scrambleButton {
+  margin-top: 8%;
+}
