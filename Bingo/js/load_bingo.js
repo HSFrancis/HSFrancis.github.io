@@ -19,6 +19,8 @@ var WAIT_TIME_BEFORE_FLIP_CARD = 800; // in miliseconds.
 // In this way, we can shuffle the indexes to randomize what text/pictures appear. 
 var element_order_in_grid = [...Array(NUMBER_OF_ITEMS).keys()]; 
 
+console.log("Version 2:06pm");
+
 onPageLoaded();
 
 
@@ -45,6 +47,8 @@ function onPageLoaded(){
 
 /* Called when the user changes the dropdown item */
 function onDropdownChanged() {
+	stopAllSound();
+
 	// update globals to new columns
 	// Values are the column keys
 	var selectedColumnKey = document.getElementById("column-title").value;
