@@ -19,7 +19,7 @@ var WAIT_TIME_BEFORE_FLIP_CARD = 800; // in miliseconds.
 // In this way, we can shuffle the indexes to randomize what text/pictures appear. 
 var element_order_in_grid = [...Array(NUMBER_OF_ITEMS).keys()]; 
 
-console.log("Version 2:06pm");
+console.log("Version 2:10pm");
 
 onPageLoaded();
 
@@ -253,7 +253,7 @@ function playTextSound(textAudioID){
 
    		if (promise) {
 			    //Older browsers may not return a promise, according to the MDN website
-			    promise.catch(function(error) { console.error(error); });
+			    promise.catch(function(error) { console.log(error); });
 			}
     }
 }
@@ -268,7 +268,7 @@ function playImageSound(imageAudioID){
    		var promise = document.getElementById(imageAudioID).play();
    		if (promise) {
 		    //Older browsers may not return a promise, according to the MDN website
-		    promise.catch(function(error) { console.error(error); });
+		    promise.catch(function(error) { console.log(error); });
 			}
     }
 }
@@ -466,6 +466,7 @@ function setBingoOnClicks() {
 function createAudioElement(audioID, audioFileName, audioType){
   var audioElem = document.createElement("AUDIO");
   audioElem.id = audioID;
+  audioElem.preload = "auto";
 
   var audioSource = document.createElement("SOURCE");
   audioSource.src =  audioFileName;
