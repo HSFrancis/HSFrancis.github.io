@@ -245,7 +245,12 @@ function playTextSound(textAudioID){
    } else {
    		// make sure only sound playing
    		stopAllSound();
-   		document.getElementById(textAudioID).play();
+   		var promise = document.getElementById(textAudioID).play();
+
+   		if (promise) {
+			    //Older browsers may not return a promise, according to the MDN website
+			    promise.catch(function(error) { console.error(error); });
+			}
     }
 }
 
@@ -256,7 +261,11 @@ function playImageSound(imageAudioID){
    } else {
 			// stop other sounds playing
 	   	stopAllSound();
-   		document.getElementById(imageAudioID).play();
+   		var promise = document.getElementById(imageAudioID).play();
+   		if (promise) {
+		    //Older browsers may not return a promise, according to the MDN website
+		    promise.catch(function(error) { console.error(error); });
+			}
     }
 }
 
