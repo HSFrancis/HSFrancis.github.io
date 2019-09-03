@@ -19,14 +19,7 @@ var WAIT_TIME_BEFORE_FLIP_CARD = 800; // in miliseconds.
 // In this way, we can shuffle the indexes to randomize what text/pictures appear. 
 var element_order_in_grid = [...Array(NUMBER_OF_ITEMS).keys()]; 
 
-console.log("Version 10:49am");
-
-onPageLoaded();
-
-
-function myFunction() {
-	console.log("on load called");
-}
+console.log("Version 10:52am");
 
 // Call once when the page is loaded to initialize audio and grid onClick functions.
 function onPageLoaded(){
@@ -350,7 +343,6 @@ function setBingoPicturesOrText() {
   		document.getElementById(getGridImageID(grid_id)).src = getImagePath(element_data[getImageFile_DataIndex()]);
   	} else {
   		// Set text
-  		console.log("USE_BINGO_IMAGES is false");
   		document.getElementById(getGridTextID(grid_id)).innerHTML = element_data[getText_DataIndex()];
   }
 
