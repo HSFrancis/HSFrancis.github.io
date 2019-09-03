@@ -391,7 +391,6 @@ var ABCPic_pages_data = [
 
 var BodyParts_pages_data = [
 	[ my_body_page_data, "body-chart.svg"],
-	[ my_body_page_data, "body-chart.svg"],
 ]
 
 var Clothing_pages_data = [
