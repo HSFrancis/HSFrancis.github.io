@@ -1,0 +1,11 @@
+.dropped-bubble-outline {
+	fill: white;
+	stroke: gray; /*#1A1A1A;*/
+	stroke-width:3;
+	stroke-miterlimit:10;
+}
+
+.dropzone-highlight {
+	stroke: blue;
+	stroke-width: 3;
+}

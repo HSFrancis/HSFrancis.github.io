@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+
+<head>
+  <!-- Makes sure you can see the syllabary -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- bootstrap stylesheet -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- Interact JS allows dragging and dropping -->
+	<script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.4/dist/interact.min.js"></script>
+	<!-- Snap.svg allows manipulating svgs -->
+  <script src="dist/snap.svg-min.js"></script>
+	<!-- Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+	<!-- Link CSS Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/style.css"> 
+ 	<!-- <link rel="stylesheet" type="text/css" href="css/site_layout.css"> -->
+ 	<link rel="stylesheet" type="text/css" href="css/svg_styling.css">
+
+ 	<!-- Link Javascript -->
+ 		<!-- *data is imported on this line* -->
+    <script src="js/image_and_vocabulary_data.js"></script>
+    <script src="js/load_svg.js" defer></script>
+
+	<title>ᏗᏟᎶᏍᏔᏅ ᏗᎧᏁᎢᏍᏗ </title>
+</head>
+<body>
+
+	<div id="audio-elements"></div>
+
+	<div class="main-page" id="main-page-content"> 
+		<div class="container">
+			<div class="row text-center">
+				<div class="col">
+					<select class="top-padding custom-font" id="dictionary-title">
+						<!-- Here is where the column options are added in Javascript -->
+					</select>
+				</div>
+			</div>
+			<!--<div class="row text-center">
+				<div class="col">
+					<span>(choose a page to start from)</span>
+				</div>
+			</div>-->
+			<div class="row" id="page-thumbnail-container">
+				<!-- Thumbnails dynamically populated here in Javascript -->
+			</div>
+		</div>
+	</div>
+
+	<div class="page-content hide" id="page-content-div">
+		<div class="home" id="home-button">
+     <img class="home-style" src="images/home.png" alt="home icon">  
+    </div>
+    <div class="page-turn" id="left-arrow">
+     <img class="arrow-svg" src="images/left_arrow.svg" alt="left page arrow">  
+    </div>
+	  <div>
+	    <svg id="interactive-area"></svg>
+	  </div>
+    <div class="page-turn" id="right-arrow">
+      <img class="arrow-svg" src="images/right_arrow.svg" alt="left page arrow">  
+    </div>
+  </div>
+
+
+
+	<!-- bootstrap javascript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+

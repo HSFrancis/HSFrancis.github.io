@@ -1,0 +1,39 @@
+
+/* TODO: Make sure that these fonts are cross-browser compatible */
+@font-face {
+	font-family: "aboriginalSerif";
+	src: /*url("fonts/aboriginal_serif_italic_939-webfont.woff2") format('woff2'),
+		url("fonts/aboriginal_serif_italic_939-webfont.woff") format('woff'), */
+		url("fonts/AboriginalSerifITALIC.ttf") format('truetype');
+	font-style: italic;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "aboriginalSerif";
+	src: /* url("fonts/aboriginal_serif_regular_939-webfont.woff2") format('woff2'),
+		url("fonts/aboriginal_serif_regular_939-webfont.woff") format('woff'), */
+	 	url("fonts/AboriginalSerifREGULAR.ttf") format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "aboriginalSerif";
+	src: /* url("fonts/aboriginal_serif_bold_939-webfont.woff2") format('woff2'),
+		 url("fonts/aboriginal_serif_bold_939-webfont.woff") format('woff'), */
+		 url("fonts/AboriginalSerifBOLD.ttf") format('truetype');
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "aboriginalSerif";
+	src: /* url("fonts/aboriginal_serif_bold_939-webfont.woff2") format('woff2'),
+		 url("fonts/aboriginal_serif_bold_939-webfont.woff") format('woff'), */
+		 url("fonts/AboriginalSerifBOLDITALIC.ttf") format('truetype');
+	font-style: italic;
+	font-weight: bold;
+}
+
+

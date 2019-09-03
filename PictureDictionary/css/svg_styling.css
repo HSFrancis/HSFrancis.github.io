@@ -1,0 +1,49 @@
+#interactive-area {
+	width:100%;
+	height:100%;
+}
+
+#right-arrow {
+  padding-left: 2%;
+  position: absolute;
+  right: 0px;
+  top:50%;
+}
+
+#left-arrow {
+  padding-right: 2%;
+  position: absolute;
+  left : 0px;
+  top:50%;
+}
+
+#home-button {
+	padding-right: 2%;
+	position: absolute;
+  left: 5%;
+  top:5%;
+}
+
+.home-style {
+	width: 10vh;
+}
+
+.page-content {
+	display: inline;
+}
+
+.hide {
+	display: none;
+}
+
+#dictionary-title {
+    font-family: 'aboriginalSerif';
+    font-weight: normal;
+    font-size: 200%; /* 200% works for showing one character */
+    padding-top: 3%;
+}
+
+.custom-font {
+  font-family: 'aboriginalSerif';
+  font-weight: normal;
+}
