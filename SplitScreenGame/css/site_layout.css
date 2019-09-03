@@ -1,0 +1,187 @@
+#column-title {
+    font-family: 'aboriginalSerif';
+    font-weight: normal;
+    font-size: 200%; /* 200% works for showing one character */
+    padding-top: 3%;
+}
+
+.header-row {
+  padding-left: 1%;
+}
+
+/* Styles for syllable text */
+.syllable-label {
+    position: absolute;
+    color: black;
+    top:20%;
+    left:40%;
+}
+
+.syllable-label-heading {
+    font-size: 400%;
+    font-family: 'aboriginalSerif';
+    font-style: normal;
+}
+
+/* Styles for word text */
+.text-label { /* attached to div surrounding text */
+    position: absolute;
+    color: black;
+    top:20%; /* still need to position over the image */
+}
+
+.text-label-heading {
+    font-size: 225%;
+    font-family: 'aboriginalSerif';
+    font-style: normal;
+}
+
+.custom-font {
+  font-family: 'aboriginalSerif';
+  font-weight: normal;
+}
+
+.fit-image {
+  max-width: 100%; /* keeps images from being stretched */
+  max-height: 170px;
+}
+
+.ear-img {
+  max-height: 50px;
+}
+
+.fireworks {
+  max-width: 100%; /* keeps images from being stretched */
+  padding-top: 5%;
+      display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.glow {
+  -webkit-box-shadow:0 0 20px yellow; 
+  -moz-box-shadow: 0 0 20px yellow; 
+  box-shadow:0 0 20px yellow;
+}
+
+.wrong-glow {
+  -webkit-box-shadow:0 0 20px red; 
+  -moz-box-shadow: 0 0 20px red; 
+  box-shadow:0 0 20px red;
+  background-color: red;
+}
+
+.button {
+  background-color: #f2f0eb; /* Gray */
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+}
+
+button[disabled=disabled], button:disabled {
+    color: #d9d8d3;
+}
+
+.game-space-content {
+  /*padding-top: 15%;*/
+}
+
+.game-space {
+    display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 140px;
+}
+
+@media only screen and (max-height: 500px) {
+  .game-space { /* makes this take precedent bc more specific */
+    height: 150px;
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .game-space { /* makes this take precedent bc more specific */
+    height: 160px;
+  }
+}
+
+@media only screen and (max-height: 730px) {
+  .game-space { /* makes this take precedent bc more specific */
+    height: 170px;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  .game-space { /* makes this take precedent bc more specific */
+    height: 190px;
+  }
+}
+
+
+@media only screen and (max-height: 850px) {
+  .game-space { /* makes this take precedent bc more specific */
+    height: 200px;
+  }
+}
+
+@media only screen and (min-height: 900px) {
+  .game-space { /* makes this take precedent bc more specific */
+    height: 270px;
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  .game-space { /* makes this take precedent bc more specific */
+    height: 300px;
+  }
+}
+
+.top-padding {
+	margin-top: 5%;
+}
+
+.top-row-margin {
+  margin-top: 1%;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.roundButton {
+  padding: 10%;
+}
+
+#scrambleButton {
+  margin-top: 8%;
+}
+
+.settings-text {
+  font-size: 150%;
+}
+
+.settings-padding {
+  padding-left: 20%;
+}
+
+.vocabulary-label {
+  font-size: 200%;
+}
+
+.bottom-padding {
+  margin-bottom: 5%;
+}
+
+#radio-buttons {
+  padding-left: 25%;
+}
+
+.hide {
+  display: none;
+}
+
+.points-text {
+  font-size: 200%;
+}

@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+
+<head>
+  <!-- Makes sure you can see the syllabary -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- bootstrap stylesheet -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- Link CSS Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+ 	<link rel="stylesheet" type="text/css" href="css/site_layout.css">
+ 	<link rel="stylesheet" type="text/css" href="css/background_colors.css">
+
+ 	<!-- Link Javascript -->
+ 		<!-- *data is imported on this line* -->
+    <script src="js/vocabulary_data.js" defer></script>
+    <script src="js/game.js" defer></script>
+
+	<title>Game</title>
+</head>
+<body>
+
+<div id="settings-div">
+	<div class="container header-row">
+		<div class="row">
+			<div class="col text-center">
+				<h1 class="top-padding custom-font text-center"> ᎠᏤ ᏗᏁᎶᏗᎢ</h1>
+			</div>
+		</div>
+	</div>
+
+	<div id="audio-elements"></div>
+
+
+	<div class="container" id="settings-container"> 
+		<!-- words per round row -->
+		<div class="row">
+			<div class="col settings-padding">
+				<span class="custom-font settings-text vocabulary-label"> (vocabulary set): </span>
+				<select class="top-padding bottom-padding" id="column-title">
+					<!-- Here is where the column options are added in Javascript -->
+				</select>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col settings-padding">
+				<span class="custom-font settings-text"> (rounds per game): </span>
+				<select class="custom-font settings-text" id="rounds-per-game-dropdown">
+					  <option value="5">5</option>
+					  <option value="6">6</option>
+					  <option value="7">7</option>
+					  <option value="8">8</option>
+					  <option value="9">9</option>
+					  <option value="10">10</option>
+					  <option value="11">11</option>
+					  <option value="12">12</option>
+					  <option value="13">13</option>
+					  <option value="14">14</option>
+					  <option value="15">15</option>
+					  <option value="16">16</option>
+					  <option value="17">17</option>
+					  <option value="18">18</option>
+					  <option value="19">19</option>
+					  <option value="20">20</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col settings-padding">
+				<span class="custom-font settings-text"> (number of words to show): </span>
+				<select class="custom-font settings-text" id="num-words-to-show-dropdown">
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4" selected>4</option>
+					  <option value="5">5</option>
+					  <option value="6">6</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row" id="radio-buttons-label">
+			<div class="col settings-padding">
+				<span class="custom-font settings-text"> (play with): </span> <br>
+			</div>
+		</div>		
+
+		<div class="row">
+			<div class="col settings-padding" id = "radio-buttons">
+				<input type="radio" id="picture-radio" name="play-with" value="pictures" >
+  				<label for="huey">(pictures)</label>
+				<input type="radio" id="picture-radio" name="play-with" value="words" checked>
+  				<label for="huey">(words)</label>	
+				<input type="radio" id="picture-radio" name="play-with" value="words_and_pictures" >
+  				<label for="huey">(pictures and words)</label>	
+			</div>
+		</div>
+		
+		<!-- TODO: let players pick a color --> 
+
+		<div class="row settings-padding">
+			<div class="col">
+				<span class="red0-background custom-font settings-text" id="left-color-text"> (left player color): </span>
+				<select class="custom-font settings-text" id="left-color-dropdown">
+					  <option value="red0-background">ᎩᎦᎨᎢ</option>
+					  <option value="brown0-background">ᎤᏬᏗᎨᎢ</option>
+					  <option value="purple0-background">ᎤᏪᏘᎨᎢ</option>
+					  <option value="blue0-background">ᏌᎪᏂᎨᎢ</option>
+					  <option value="green0-background">ᎢᏤᎢ</option>
+					  <option value="yellow0-background">ᏓᎶᏂᎨᎢ</option>
+					  <option value="orange0-background">ᎠᏓᎶᏂᎨᎢ</option>
+				</select>
+			</div>
+			<div class="col">
+						<!-- <div id="right-player-color-wrapper"> -->
+				<span class="red1-background custom-font settings-text" id="right-color-text"> (right player color): </span>
+				<select class="custom-font settings-text" id="right-color-dropdown">
+					  <option value="red1-background">ᎩᎦᎨᎢ</option>
+					  <option value="brown1-background">ᎤᏬᏗᎨᎢ</option>
+					  <option value="purple1-background">ᎤᏪᏘᎨᎢ</option>
+					  <option value="blue1-background">ᏌᎪᏂᎨᎢ</option>
+					  <option value="green1-background">ᎢᏤᎢ</option>
+					  <option value="yellow1-background">ᏓᎶᏂᎨᎢ</option>
+					  <option value="orange1-background">ᎠᏓᎶᏂᎨᎢ</option>
+				</select>
+		</div>
+		</div>
+		<div class="row">
+			<div class="col text-center top-padding">
+				<button class="custom-font settings-text" id="start-button"> ᎯᏓᎴᎾ</button>
+			</div>
+		</div>
+
+	</div>
+</div> <!-- end setup div-->
+
+<div class="hide" id="playing-div">
+	<div class="container">
+		<div class="row top-row-margin">
+			<!-- Header row -->
+			<div class="col-md-4">
+				<button class="custom-font button" id="new-game-button"> ᎠᏤ ᏗᏁᎶᏗᎢ </button>
+			</div>
+			<div class="col-md-4">
+				<span class="custom-font settings-text vocabulary-label" id="vocab-set-title"> (vocabulary set title) </span>
+			</div>
+			<div class="col-md-4">
+				<button class="custom-font button" id="restart-button"> ᏔᎵᏁ ᎯᏓᎴᎾ </button>
+			</div>
+		</div>
+
+		<!-- Points row -->
+		<div class="row text-center">
+			<div class="col points-text">
+				<!-- this is where an animal could be -->
+				<span> <img  alt="left ear" class="ear-img" src="images/ear_left.png"></span>
+				<span class="custom-font" > ᏗᎪᏍᏓᏱ : </span>
+				<span class="custom-font" id="left-points"> # </span>
+			</div>
+			<div class="col points-text">
+				<!-- this is where an animal could be -->
+				<span class="custom-font" > ᏗᎪᏍᏓᏱ : </span>
+				<span class="custom-font" id="right-points"> # </span>
+				<span> <img  alt="right ear" class="ear-img" src="images/ear_right.png"></span>
+			</div>
+		</div>
+
+		<!-- Game row -->
+		<div class="row custom-font justify-content-center">
+			<div class="col-md-6" id="left-side">
+				<!-- Ear -->
+				<div class="row hide" id="left-waiting-content">
+					<div class="col text-center">
+						<img  alt="left ear" class="img-responsive fit-image" src="images/ear_left.png">
+					</div>
+				</div>
+
+				<!-- Fireworks -->
+				<div class="row hide" id="left-fireworks">
+					<div class="col text-center">
+						<img  alt="left fireworks" class="img-responsive fireworks" src="images/Fireworks.gif">
+					</div>
+				</div>
+
+				<div class="row" id="left-side-content">
+					<div class="col-md-6">
+						<div class="game-space justify-content-center" id="gridDiv-0-0">
+							<div class="game-space-content text-center">
+					   	  <img  alt="test_image" class="img-responsive fit-image hide" id="img-0-0">
+								<h1 class="textElement" id="element-0-0"> grid-div-0-0  </h1>
+							</div>
+						</div>
+						<div class="game-space justify-content-center" id="gridDiv-0-2">
+							<div class="game-space-content text-center">
+								<img  alt="test_image" class="img-responsive fit-image hide" id="img-0-2">
+								<h1 class="textElement" id="element-0-2"> grid-div-0-2  </h1>
+							</div>
+						</div>
+						<div class="game-space justify-content-center" id="gridDiv-0-4">
+							<div class="game-space-content text-center">
+								<img  alt="test_image" class="img-responsive fit-image hide" id="img-0-4">
+								<h1 class="textElement" id="element-0-4"> grid-div-0-4  </h1>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="game-space justify-content-center" id="gridDiv-0-1">
+							<div class="game-space-content text-center">
+								<img  alt="test_image" class="img-responsive fit-image hide" id="img-0-1">
+								<h1 class="textElement" id="element-0-1"> grid-div-0-1  </h1>
+							</div>
+						</div>
+						<div class="game-space justify-content-center" id="gridDiv-0-3"> 
+							<div class="game-space-content text-center">
+								<img  alt="test_image" class="img-responsive fit-image hide" id="img-0-3">
+								<h1 class="textElement" id="element-0-3"> grid-div-0-3  </h1>
+							</div>
+						</div>
+						<div class="game-space justify-content-center" id="gridDiv-0-5">
+							<div class="game-space-content text-center">
+								<img  alt="test_image" class="img-responsive fit-image hide" id="img-0-5">
+								<h1 class="textElement" id="element-0-5"> grid-div-0-5  </h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6" id="right-side">
+				<!-- Ear -->
+				<div class="row hide" id="right-waiting-content">
+					<div class="col text-center">
+						<img  alt="right ear" class="img-responsive fit-image" src="images/ear_right.png">
+					</div>
+				</div>
+				<!-- Fireworks -->
+				<div class="row hide" id="right-fireworks">
+					<div class="col text-center">
+						<img  alt="right fireworks" class="img-responsive fireworks" src="images/Fireworks.gif">
+					</div>
+				</div>
+
+				<div class="row" id="right-side-content">
+					<div class="col-md-6">
+						<div class="game-space justify-content-center" id="gridDiv-1-0">
+							<div class="game-space-content text-center">
+					   	  <img  alt="test_image" class="img-responsive fit-image hide" id="img-1-0">
+								<h1 class="textElement" id="element-1-0"> grid-div-1-0  </h1>
+							</div>
+						</div>
+						<div class="game-space justify-content-center" id="gridDiv-1-2">
+							<div class="game-space-content text-center">
+								<img  alt="test_image" class="img-responsive fit-image hide" id="img-1-2">
+								<h1 class="textElement" id="element-1-2"> grid-div-1-2  </h1>
+							</div>
+						</div>
+						<div class="game-space justify-content-center" id="gridDiv-1-4">
+							<div class="game-space-content text-center">
+								<img  alt="test_image" class="img-responsive fit-image hide" id="img-1-4">
+								<h1 class="textElement" id="element-1-4"> grid-div-1-4  </h1>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="game-space justify-content-center" id="gridDiv-1-1">
+							<div class="game-space-content text-center">
+								<img  alt="test_image" class="img-responsive fit-image hide" id="img-1-1">
+								<h1 class="textElement" id="element-1-1"> grid-div-1-1  </h1>
+							</div>
+						</div>
+						<div class="game-space justify-content-center" id="gridDiv-1-3"> 
+							<div class="game-space-content text-center">
+								<img  alt="test_image" class="img-responsive fit-image hide" id="img-1-3">
+								<h1 class="textElement" id="element-1-3"> grid-div-1-3  </h1>
+							</div>
+						</div>
+						<div class="game-space justify-content-center" id="gridDiv-1-5">
+							<div class="game-space-content text-center">
+								<img  alt="test_image" class="img-responsive fit-image hide" id="img-1-5">
+								<h1 class="textElement" id="element-1-5"> grid-div-1-5  </h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<!-- bootstrap javascript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+
